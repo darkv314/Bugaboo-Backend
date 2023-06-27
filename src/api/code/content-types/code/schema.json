@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "codes",
+  "info": {
+    "singularName": "code",
+    "pluralName": "codes",
+    "displayName": "Code"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 500
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "code"
+    }
+  }
+}
