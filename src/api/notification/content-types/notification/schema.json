@@ -4,7 +4,8 @@
   "info": {
     "singularName": "notification",
     "pluralName": "notifications",
-    "displayName": "Notification"
+    "displayName": "Notification",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,15 +16,15 @@
       "type": "string",
       "required": true
     },
+    "read": {
+      "type": "boolean",
+      "default": false
+    },
     "users_permissions_user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "notifications"
-    },
-    "read": {
-      "type": "boolean",
-      "default": false
     }
   }
 }

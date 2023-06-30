@@ -16,6 +16,12 @@
       "type": "text",
       "required": true
     },
+    "upvotes": {
+      "type": "integer"
+    },
+    "downvotes": {
+      "type": "integer"
+    },
     "code": {
       "type": "relation",
       "relation": "manyToOne",
@@ -27,12 +33,6 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "comments"
-    },
-    "upvotes": {
-      "type": "integer"
-    },
-    "downvotes": {
-      "type": "integer"
     }
   }
 }

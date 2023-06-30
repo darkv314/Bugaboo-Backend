@@ -66,11 +66,18 @@
       "configurable": false
     },
     "profilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "users_permissions_user"
     },
     "comments": {
       "type": "relation",
@@ -78,10 +85,10 @@
       "target": "api::comment.comment",
       "mappedBy": "users_permissions_user"
     },
-    "notifications": {
+    "codes": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::notification.notification",
+      "target": "api::code.code",
       "mappedBy": "users_permissions_user"
     }
   }
