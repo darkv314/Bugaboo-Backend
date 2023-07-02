@@ -35,6 +35,18 @@
     "code": {
       "type": "text",
       "required": true
+    },
+    "downvotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "code_downvotes"
+    },
+    "upvotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "code_upvotes"
     }
   }
 }

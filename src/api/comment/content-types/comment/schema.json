@@ -16,12 +16,6 @@
       "type": "text",
       "required": true
     },
-    "upvotes": {
-      "type": "integer"
-    },
-    "downvotes": {
-      "type": "integer"
-    },
     "code": {
       "type": "relation",
       "relation": "manyToOne",
@@ -41,6 +35,18 @@
     "codeLine": {
       "type": "text",
       "required": true
+    },
+    "upvotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "comment_upvotes"
+    },
+    "downvotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "comment_downvotes"
     }
   }
 }

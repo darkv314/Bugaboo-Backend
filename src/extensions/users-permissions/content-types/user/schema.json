@@ -90,6 +90,30 @@
       "relation": "oneToMany",
       "target": "api::code.code",
       "mappedBy": "users_permissions_user"
+    },
+    "comment_upvotes": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "upvotes"
+    },
+    "comment_downvotes": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "downvotes"
+    },
+    "code_downvotes": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::code.code",
+      "inversedBy": "downvotes"
+    },
+    "code_upvotes": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::code.code",
+      "inversedBy": "upvotes"
     }
   }
 }
